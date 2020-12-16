@@ -8,6 +8,13 @@
 </head>
 <body>
 	<div class="board">
+		{% for post in posts %}
+		<div>
+			<p>published: {{ post.published_date }}</p>
+			<h1><a>{{ post.title }}</a></h1>
+			<p>{{ post.text|linebreaksbr }}</p>
+		</div>
+		{% endfor %}
 		<div class="top">
 			<img src="https://talent.kruzhok.org/images/talent_logo_black.svg" alt="avatar">
 		</div>
